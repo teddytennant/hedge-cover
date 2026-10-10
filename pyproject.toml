@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hedge-cover"
+version = "0.1.0"
+description = "Hedge over a finite cover of selector-consistent hypotheses for smoothed online regression"
+requires-python = ">=3.10"
+dependencies = [
+    "jax",
+    "numpy",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
